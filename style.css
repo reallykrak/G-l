@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Scrollbar'ı gizle */
+    background-color: black; /* Arka planı siyah yap */
+    display: flex;
+    justify-content: center; /* Resmi yatayda ortala */
+    align-items: center; /* Resmi dikeyde ortala */
+    min-height: 100vh; /* Ekranın tamamını kapla */
+}
+
+.container {
+    text-align: center; /* İçindeki öğeleri (gülü) ortala */
+}
+
+.rose-image {
+    max-width: 80%; /* Resmin genişliğini ekranın %80'i yap */
+    height: auto; /* Oranları koru */
+    display: block; /* Margin auto için block element yap */
+    margin: 0 auto; /* Resmi yatayda ortala */
+    animation: fadeIn 3s forwards; /* Güzel bir soluklaşma efekti */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Başlangıçta görünmez */
+    }
+    to {
+        opacity: 1; /* Sonunda tamamen görünür */
+    }
+}
+
+/* Mobil cihazlar için ek düzenlemeler */
+@media (max-width: 768px) {
+    .rose-image {
+        max-width: 95%; /* Mobil cihazlarda daha geniş yer kapla */
+    }
+}
+
+/* iPhone gibi daha küçük ekranlar için */
+@media (max-width: 480px) {
+    .rose-image {
+        max-width: 100%; /* Çok küçük ekranlarda tam genişlik */
+    }
+}
